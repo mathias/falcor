@@ -39,16 +39,16 @@ module Falcor
       fields.each do |field|
         value = self.send(field)
         unless value.nil?
-          json[field] = self.send(field)
+          json[field.to_s] = self.send(field)
         end
       end
 
       associations.each do |field|
-        json[field] = self.send(field).send(:to_json)
+        json[field.to_js] = self.send(field).send(:to_json)
       end
 
       lists.each do |field|
-        json[field] = self.send(field).map { |m| m.to_json }
+        json[field.to_s] = self.send(field).map { |m| m.to_json }
       end
 
       json
