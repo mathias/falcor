@@ -45,11 +45,11 @@ user = Factory :user
 
 user.to_json
 
-=> {:email=>"user@example.com",
- :full_name=>"Matt Gauger",
- :blog_posts=>
-  [{:title=>"My post", :body=>"Lots of text"},
-   {:title=>"My post", :body=>"Lots of text"}]}
+=> {"email"=>"user@example.com",
+ "full_name"=>"Matt Gauger",
+ "blog_posts"=>
+  [{"title"=>"My post", "body"=>"Lots of text"},
+   {"title"=>"My post", "body"=>"Lots of text"}]}
 ```
 
 You can also override defaults:
@@ -73,7 +73,7 @@ end
 contact = Factory :contact, full_name: "Robert Pitts"
 
 contact.to_json
-=> {:full_name=>"Robert Pitts"} # Other attributes don't appear in JSON
+=> {"full_name"=>"Robert Pitts"} # Other attributes don't appear in JSON
 ```
 
 And much more! (To be continued...)
