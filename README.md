@@ -26,7 +26,41 @@ Or install it yourself as:
 
 ## Usage
 
+Here's how you'd define some factories, create an instance of the new `user` factory, and then turn it into JSON:
 
+```ruby
+Falcor::Fabricator.define :blog_post do
+  field :title, "My post"
+  field :body, "Lots of text"
+end
+
+Falcor::Fabricator.define :user do
+  field :email, "user@example.com"
+  field :full_name, "Matt Gauger"
+
+  create_list :blog_posts, 2, Factory(:blog_post)
+end
+
+user = Factory :user
+
+user.to_json
+#=> {:email=>"user@example.com",
+ :full_name=>"Matt Gauger",
+ :blog_posts=>
+  [{:title=>"My post", :body=>"Lots of text"},
+   {:title=>"My post", :body=>"Lots of text"}]}
+```
+
+You can also override defaults:
+
+```ruby
+post = Factory :blog_post, title: "My really cool post"
+
+post.title
+#=> "My really cool blog post"
+```
+
+And much more! (To be continued...)
 
 ## Contributing
 
