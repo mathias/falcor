@@ -1,6 +1,6 @@
 # Falcor
 
-TODO: Write a gem description
+Falcor is intended to solve several problems, namely, to be able to quickly define fixture data and use it for things like example JSON web services, mocking out tests, and seeding test data into document stores. The DSL should be very familiar to users of tools like FactoryGirl, but it doesn't require the class to exist before you define the factory.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
 
 ## Contributing
 
