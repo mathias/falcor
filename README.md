@@ -44,7 +44,8 @@ end
 user = Factory :user
 
 user.to_json
-#=> {:email=>"user@example.com",
+
+=> {:email=>"user@example.com",
  :full_name=>"Matt Gauger",
  :blog_posts=>
   [{:title=>"My post", :body=>"Lots of text"},
@@ -57,7 +58,22 @@ You can also override defaults:
 post = Factory :blog_post, title: "My really cool post"
 
 post.title
-#=> "My really cool blog post"
+=> "My really cool blog post"
+```
+
+For optional fields on factories (those that don't have a default value and shouldn't show up in JSON unless set), use `allow`:
+
+```ruby
+Falcor::Fabricator.define :contact do
+  allow :full_name
+  allow :phone_number
+  allow :address
+end
+
+contact = Factory :contact, full_name: "Robert Pitts"
+
+contact.to_json
+=> {:full_name=>"Robert Pitts"} # Other attributes don't appear in JSON
 ```
 
 And much more! (To be continued...)
