@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-Here's how you'd define some factories, create an instance of the new `user` factory, and then turn it into JSON:
+Here's how you'd define some factories, create an instance of the new `user` factory, and then turn it into a hash to use as JSON:
 
 ```ruby
 Falcor::Fabricator.define :blog_post do
