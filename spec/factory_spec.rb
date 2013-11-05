@@ -18,4 +18,9 @@ describe 'Factory' do
     post = Factory :blog_post
     expect(post.to_json).to eq({ "title" => "My post", "body" => "Lots of text" })
   end
+
+  it 'allows attributes to be overridden' do
+    post = Factory :blog_post, title: "My super sweet post"
+    expect(post.title).to eq "My super sweet post"
+  end
 end
