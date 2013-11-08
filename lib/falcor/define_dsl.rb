@@ -33,8 +33,12 @@ module Falcor
         self.send(:define_method, "#{attr}=", default_assignment_blk)
       end
 
-      def association(attr, model)
+      def association(attr, model=nil)
         self.associations = (self.associations || []).push(attr)
+
+        unless model
+          model = Factory attr
+        end
 
         default_blk = Proc.new { return self.instance_variable_get("@#{attr}".to_sym) || model }
         self.send(:define_method, attr, default_blk)
