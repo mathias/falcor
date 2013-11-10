@@ -26,6 +26,8 @@ Or install it yourself as:
 
 ## Usage
 
+### Defining factories & creating instances
+
 Here's how you'd define some factories, create an instance of the new `user` factory, and then turn it into a hash to use as JSON:
 
 ```ruby
@@ -52,6 +54,8 @@ user.to_json
    {"title"=>"My post", "body"=>"Lots of text"}]}
 ```
 
+### Overriding defaults
+
 You can also override defaults:
 
 ```ruby
@@ -60,6 +64,8 @@ post = Factory :blog_post, title: "My really cool post"
 post.title
 => "My really cool blog post"
 ```
+
+### Optional fields
 
 For optional fields on factories (those that don't have a default value and shouldn't show up in JSON unless set), use `allow`:
 
