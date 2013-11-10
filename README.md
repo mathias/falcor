@@ -82,7 +82,22 @@ contact.to_json
 => {"full_name"=>"Robert Pitts"} # Other attributes don't appear in JSON
 ```
 
-And much more! (To be continued...)
+### Associations
+
+The most basic form of association assumes that the name of the attribute matches the Factory of the assocation:
+
+```ruby
+Falcor::Fabricator.define :metadata do
+  field :api_version, "2.1"
+  field :stub_data, false
+end
+
+Falcor::Fabricator.define :report do
+  field :name, "Simple Report"
+  field :answer, 42
+  association :metadata
+end
+```
 
 ## Contributing
 
