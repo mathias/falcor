@@ -7,8 +7,7 @@ Falcor is intended to solve several problems, namely, to be able to quickly defi
 ### TODO:
 
 * Traits
-* Port over tests
-* Examples of usage for README
+* Validations? (It's a neat thought, but probably overkill here.)
 
 ## Installation
 
