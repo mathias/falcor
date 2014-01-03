@@ -10,7 +10,7 @@ module Falcor
       def allow(attr)
         self.fields = (self.fields || []).push(attr)
 
-        default_blk = Proc.new { return self.instance_variable_get("@#{attr}".to_sym) }
+        default_blk = Proc.new { self.instance_variable_get("@#{attr}".to_sym) }
         self.send(:define_method, attr, default_blk)
 
         default_assignment_blk = Proc.new do |val|
@@ -23,7 +23,7 @@ module Falcor
       def field(attr, default)
         self.fields = (self.fields || []).push(attr)
 
-        default_blk = Proc.new { return self.instance_variable_get("@#{attr}".to_sym) || default }
+        default_blk = Proc.new { self.instance_variable_get("@#{attr}".to_sym) || default }
         self.send(:define_method, attr, default_blk)
 
         default_assignment_blk = Proc.new do |val|
@@ -40,7 +40,7 @@ module Falcor
           model = Factory attr
         end
 
-        default_blk = Proc.new { return self.instance_variable_get("@#{attr}".to_sym) || model }
+        default_blk = Proc.new { self.instance_variable_get("@#{attr}".to_sym) || model }
         self.send(:define_method, attr, default_blk)
 
         default_assignment_blk = Proc.new do |val|
@@ -64,7 +64,7 @@ module Falcor
           models << model
         end
 
-        default_blk = Proc.new { return self.instance_variable_get("@#{attr}".to_sym) || models }
+        default_blk = Proc.new { self.instance_variable_get("@#{attr}".to_sym) || models }
         self.send(:define_method, attr, default_blk)
 
         default_assignment_blk = Proc.new do |val|
