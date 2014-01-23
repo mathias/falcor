@@ -1,5 +1,7 @@
 # Falcor
 
+[![Gem Version](https://badge.fury.io/rb/falcor.png)](http://badge.fury.io/rb/falcor)
+
 ![Falcor YEAH](http://epicyearproject.files.wordpress.com/2011/05/bastian-falcor-whoop-490.gif)
 
 Falcor is intended to solve several problems, namely, to be able to quickly define fixture data and use it for things like example JSON web services, mocking out tests, and seeding test data into document stores. The DSL should be very familiar to users of tools like FactoryGirl, but it doesn't require the class to exist before you define the factory.
