@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/falcor.png)](http://badge.fury.io/rb/falcor)
 [![Build Status](https://travis-ci.org/mathias/falcor.png?branch=master)](https://travis-ci.org/mathias/falcor)
 [![Code Climate](https://codeclimate.com/github/mathias/falcor.png)](https://codeclimate.com/github/mathias/falcor)
+[![Coverage Status](https://coveralls.io/repos/mathias/falcor/badge.png)](https://coveralls.io/r/mathias/falcor)
 
 ![Falcor YEAH](http://epicyearproject.files.wordpress.com/2011/05/bastian-falcor-whoop-490.gif)
 
