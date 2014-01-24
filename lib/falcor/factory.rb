@@ -44,7 +44,7 @@ module Falcor
       end
 
       associations.each do |field|
-        json[field.to_js] = self.send(field).send(:to_json)
+        json[field.to_s] = self.send(field).send(:to_json)
       end
 
       lists.each do |field|
