@@ -7,7 +7,9 @@
 
 ![Falcor YEAH](http://epicyearproject.files.wordpress.com/2011/05/bastian-falcor-whoop-490.gif)
 
-Falcor is intended to solve several problems, namely, to be able to quickly define fixture data and use it for things like example JSON web services, mocking out tests, and seeding test data into document stores. The DSL should be very familiar to users of tools like FactoryGirl, but it doesn't require the class to exist before you define the factory.
+*Notes March 2019:* Falcor was written in 2013-2014 and has not been updated since. Use at your own risk.
+
+Falcor is intended to solve several problems, namely, to be able to quickly define fixture data and use it for things like example JSON web services, mocking out tests, and seeding test data into document stores. The DSL should be very familiar to users of tools like FactoryBot, but it doesn't require the class to exist before you define the factory.
 
 ### TODO:
 
